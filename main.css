@@ -1,0 +1,12 @@
+.border{
+    border-bottom: 1px solid black;
+}
+
+.space-up{
+    line-height: 70px;
+}
+
+.center{
+
+    text-align: center;
+}

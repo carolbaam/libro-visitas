@@ -33,36 +33,42 @@ function pintarComentarioArriba(){
 
 function makelarge(){
     console.log("hola");
+    $("#comment-zone").removeClass();
     $("#comment-zone").addClass("large");
     localStorage.size=$("#comment-zone");
 }
 
 function makeMedium(){
     console.log("hola");
+    $("#comment-zone").removeClass();
     $("#comment-zone").addClass("medium");
 }
 
 function makeSmall(){
     console.log("hola");
+    $("#comment-zone").removeClass();
     $("#comment-zone").addClass("small");
 }
 
 function putLeft(){
     console.log("hola");
+    $("#comment-zone").removeClass();
     $("#comment-zone").addClass("left");
 }
 function putCenter(){
     console.log("hola");
+    $("#comment-zone").removeClass();
     $("#comment-zone").addClass("center");
 }
 function putRight(){
     console.log("hola");
+    $("#comment-zone").removeClass();
     $("#comment-zone").addClass("right");
 }
 
 function putColor(){
-prompt("¿qué color quieres?");
-$("#comment-zone").style.color=prompt.val();
+var askColor=prompt("¿qué color quieres?");
+$("#comment-zone").style.background=askColor;
 }
 
 

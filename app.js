@@ -8,6 +8,7 @@ function loadPage(){
     $("#middle").click(putCenter);
     $("#right").click(putRight);
     $("#text-color").click(putColor);
+    $("#bg-color").click(putBgColor);
 }
 
 function pintarTiempoReal(){
@@ -33,43 +34,50 @@ function pintarComentarioArriba(){
 
 function makelarge(){
     console.log("hola");
-    $("#comment-zone").removeClass();
+    $("#comment-zone").removeClass("medium small");
     $("#comment-zone").addClass("large");
     localStorage.size=$("#comment-zone");
 }
 
 function makeMedium(){
     console.log("hola");
-    $("#comment-zone").removeClass();
+    $("#comment-zone").removeClass("large small");
     $("#comment-zone").addClass("medium");
 }
 
 function makeSmall(){
     console.log("hola");
-    $("#comment-zone").removeClass();
+    $("#comment-zone").removeClass("medium large");
     $("#comment-zone").addClass("small");
 }
 
 function putLeft(){
     console.log("hola");
-    $("#comment-zone").removeClass();
+    $("#comment-zone").removeClass("right center");
     $("#comment-zone").addClass("left");
 }
 function putCenter(){
     console.log("hola");
-    $("#comment-zone").removeClass();
+    $("#comment-zone").removeClass("left right");
     $("#comment-zone").addClass("center");
 }
 function putRight(){
     console.log("hola");
-    $("#comment-zone").removeClass();
+    $("#comment-zone").removeClass("left center");
     $("#comment-zone").addClass("right");
 }
 
 function putColor(){
-var askColor=prompt("¿qué color quieres?");
-$("#comment-zone").style.background=askColor;
+var askColor =prompt("qué color quieres");
+
+document.getElementById("comment-zone").style.color= askColor;
 }
+
+function putBgColor(){
+    var askColor2 =prompt("qué color  de fondo quieres");
+    
+    document.getElementById("comment-zone").style.background= askColor2;
+    }
 
 
 

@@ -7,6 +7,7 @@ function loadPage(){
     $("#left").click(putLeft);
     $("#middle").click(putCenter);
     $("#right").click(putRight);
+    $("#text-color").click(putColor);
 }
 
 function pintarTiempoReal(){
@@ -33,6 +34,7 @@ function pintarComentarioArriba(){
 function makelarge(){
     console.log("hola");
     $("#comment-zone").addClass("large");
+    localStorage.size=$("#comment-zone");
 }
 
 function makeMedium(){
@@ -58,25 +60,10 @@ function putRight(){
     $("#comment-zone").addClass("right");
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function putColor(){
+prompt("¿qué color quieres?");
+$("#comment-zone").style.color=prompt.val();
+}
 
 
 

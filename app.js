@@ -1,6 +1,13 @@
 function loadPage(){
     $("#tiempo-real").keyup(pintarTiempoReal);
     $("#enviar-comment").click(pintarComentarioArriba);
+    $("#large").click(makelarge);
+    $("#medium").click(makeMedium);
+    $("#small").click(makeSmall);
+    $("#left").click(putLeft);
+    $("#middle").click(putCenter);
+    $("#right").click(putRight);
+    $("#text-color").click(putColor);
 }
 
 function pintarTiempoReal(){
@@ -22,28 +29,41 @@ function pintarComentarioArriba(){
     $("#comment-up-zone").prepend($div1);
     $("#tiempo-real").val(" ");
 
-
 }
 
+function makelarge(){
+    console.log("hola");
+    $("#comment-zone").addClass("large");
+    localStorage.size=$("#comment-zone");
+}
 
+function makeMedium(){
+    console.log("hola");
+    $("#comment-zone").addClass("medium");
+}
 
+function makeSmall(){
+    console.log("hola");
+    $("#comment-zone").addClass("small");
+}
 
+function putLeft(){
+    console.log("hola");
+    $("#comment-zone").addClass("left");
+}
+function putCenter(){
+    console.log("hola");
+    $("#comment-zone").addClass("center");
+}
+function putRight(){
+    console.log("hola");
+    $("#comment-zone").addClass("right");
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function putColor(){
+prompt("¿qué color quieres?");
+$("#comment-zone").style.color=prompt.val();
+}
 
 
 

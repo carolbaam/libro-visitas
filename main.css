@@ -10,3 +10,27 @@
 
     text-align: center;
 }
+
+.large{
+    font-size: 40px;
+}
+
+.medium{
+    font-size: 25px;
+    
+}
+.small{
+    font-size: 8px;
+    
+}
+
+.left{
+    text-align: left;
+}
+
+.center{
+    text-align: center;
+}
+.right{
+    text-align: right;
+}

@@ -11,6 +11,11 @@ function loadPage(){
     $("#bg-color").click(putBgColor);
 }
 
+var comentarios=[
+    {uno:"hola",
+dos:"holaaa"}
+]
+
 function pintarTiempoReal(){
 
 var $content=$("#tiempo-real").val();
@@ -18,6 +23,7 @@ $("#comment-zone").text($content);
 }
 
 function pintarComentarioArriba(){
+   
     var $content=$("#tiempo-real").val();
     var $div1=$("<div />").addClass("row");
     var $div2=$("<div />").addClass("col-lg-4 col-lg-offset-2");
@@ -29,40 +35,40 @@ function pintarComentarioArriba(){
 
     $("#comment-up-zone").prepend($div1);
     $("#tiempo-real").val(" ");
-
+    $("#comment-zone").text(" ");
+    comentarios.push($content);
 }
 
 function makelarge(){
-    console.log("hola");
     $("#comment-zone").removeClass("medium small");
     $("#comment-zone").addClass("large");
     localStorage.size=$("#comment-zone");
 }
 
 function makeMedium(){
-    console.log("hola");
+    
     $("#comment-zone").removeClass("large small");
     $("#comment-zone").addClass("medium");
 }
 
 function makeSmall(){
-    console.log("hola");
+   
     $("#comment-zone").removeClass("medium large");
     $("#comment-zone").addClass("small");
 }
 
 function putLeft(){
-    console.log("hola");
+   
     $("#comment-zone").removeClass("right center");
     $("#comment-zone").addClass("left");
 }
 function putCenter(){
-    console.log("hola");
+   
     $("#comment-zone").removeClass("left right");
     $("#comment-zone").addClass("center");
 }
 function putRight(){
-    console.log("hola");
+    
     $("#comment-zone").removeClass("left center");
     $("#comment-zone").addClass("right");
 }

@@ -16,6 +16,11 @@ var comentarios=[
      dos:"holaaa"}
     ] 
 
+
+ function paintComments(){
+
+ }   
+
 function pintarTiempoReal(){
 
 var $content=$("#tiempo-real").val();
@@ -25,10 +30,8 @@ $("#comment-zone").text($content);
 function pintarComentarioArriba(){
    
 var $content=$("#tiempo-real").val();
-    
-
  var $clone=$("#comment-zone").clone().removeAttr('id');
- $("#comment-up-zone").prepend($clone);  
+ $("#comment-up-zone").prepend($clone).addClass("border");  
  $("#tiempo-real").val(" ");
  $("#comment-zone").empty().removeClass().removeAttr("style");
  comentarios.push($content);

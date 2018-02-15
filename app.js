@@ -11,6 +11,11 @@ function loadPage(){
     $("#bg-color").click(putBgColor);
 }
 
+var comentarios=[
+    {uno:"hola",
+     dos:"holaaa"}
+    ] 
+
 function pintarTiempoReal(){
 
 var $content=$("#tiempo-real").val();
@@ -18,51 +23,48 @@ $("#comment-zone").text($content);
 }
 
 function pintarComentarioArriba(){
-    var $content=$("#tiempo-real").val();
-    var $div1=$("<div />").addClass("row");
-    var $div2=$("<div />").addClass("col-lg-4 col-lg-offset-2");
-    var $p=$("<p />").text($content).addClass("border space-up");
    
+var $content=$("#tiempo-real").val();
     
-    $div2.append($p);
-    $div1.append($div2);
 
-    $("#comment-up-zone").prepend($div1);
-    $("#tiempo-real").val(" ");
-
+ var $clone=$("#comment-zone").clone().removeAttr('id');
+ $("#comment-up-zone").prepend($clone);  
+ $("#tiempo-real").val(" ");
+ $("#comment-zone").empty().removeClass().removeAttr("style");
+ comentarios.push($content);
+    
 }
 
 function makelarge(){
-    console.log("hola");
     $("#comment-zone").removeClass("medium small");
     $("#comment-zone").addClass("large");
-    localStorage.size=$("#comment-zone");
+    
 }
 
 function makeMedium(){
-    console.log("hola");
+    
     $("#comment-zone").removeClass("large small");
     $("#comment-zone").addClass("medium");
 }
 
 function makeSmall(){
-    console.log("hola");
+   
     $("#comment-zone").removeClass("medium large");
     $("#comment-zone").addClass("small");
 }
 
 function putLeft(){
-    console.log("hola");
+   
     $("#comment-zone").removeClass("right center");
     $("#comment-zone").addClass("left");
 }
 function putCenter(){
-    console.log("hola");
+   
     $("#comment-zone").removeClass("left right");
     $("#comment-zone").addClass("center");
 }
 function putRight(){
-    console.log("hola");
+    
     $("#comment-zone").removeClass("left center");
     $("#comment-zone").addClass("right");
 }
